@@ -1,5 +1,6 @@
 package com.liruiming.example.factory.abstractfactory;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -11,16 +12,16 @@ import org.junit.Test;
 public class AbstractFactoryTest {
     @Test
     public void test(){
-        AbstractFactory factory1 = new GuangmingFactory();
-        System.out.println(factory1.getMilk().getName());
-        System.out.println(factory1.getYogurt().getName());
+        AbstractFactory guangmingFactory = new GuangmingFactory();
+        Assert.assertEquals("光明纯牛奶", guangmingFactory.getMilk().getName());
+        Assert.assertEquals("光明莫斯利安酸奶", guangmingFactory.getYogurt().getName());
 
-        AbstractFactory factory2 = new MengniuFactory();
-        System.out.println(factory2.getMilk().getName());
-        System.out.println(factory2.getYogurt().getName());
+        AbstractFactory mengniuFactory = new MengniuFactory();
+        Assert.assertEquals("蒙牛纯牛奶", mengniuFactory.getMilk().getName());
+        Assert.assertEquals("蒙牛纯甄酸奶", mengniuFactory.getYogurt().getName());
 
-        AbstractFactory factory3 = new YiliFactory();
-        System.out.println(factory3.getMilk().getName());
-        System.out.println(factory3.getYogurt().getName());
+        AbstractFactory yiliFactory = new YiliFactory();
+        Assert.assertEquals("伊利纯牛奶", yiliFactory.getMilk().getName());
+        Assert.assertEquals("伊利安慕希酸奶", yiliFactory.getYogurt().getName());
     }
 }

@@ -1,7 +1,7 @@
 package com.liruiming.example.factory.factorymethod;
 
 import com.liruiming.example.factory.Milk;
-import com.liruiming.example.factory.Yili;
+import com.liruiming.example.factory.YiliMilk;
 
 /**
  * Description: YiliFactory 获取伊利牛奶的工厂
@@ -12,6 +12,6 @@ import com.liruiming.example.factory.Yili;
 public class YiliFactory implements Factory {
     @Override
     public Milk getMilk() {
-        return new Yili();
+        return new YiliMilk();
     }
 }

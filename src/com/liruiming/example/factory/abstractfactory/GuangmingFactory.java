@@ -1,8 +1,8 @@
 package com.liruiming.example.factory.abstractfactory;
 
-import com.liruiming.example.factory.Guangming;
+import com.liruiming.example.factory.GuangmingMilk;
 import com.liruiming.example.factory.Milk;
-import com.liruiming.example.factory.Mosilian;
+import com.liruiming.example.factory.MosilianYogurt;
 import com.liruiming.example.factory.Yogurt;
 
 /**
@@ -14,11 +14,11 @@ import com.liruiming.example.factory.Yogurt;
 public class GuangmingFactory extends AbstractFactory {
     @Override
     public Milk getMilk() {
-        return new Guangming();
+        return new GuangmingMilk();
     }
 
     @Override
     public Yogurt getYogurt() {
-        return new Mosilian();
+        return new MosilianYogurt();
     }
 }

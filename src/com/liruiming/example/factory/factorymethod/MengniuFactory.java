@@ -1,6 +1,6 @@
 package com.liruiming.example.factory.factorymethod;
 
-import com.liruiming.example.factory.Mengniu;
+import com.liruiming.example.factory.MengniuMilk;
 import com.liruiming.example.factory.Milk;
 
 /**
@@ -12,6 +12,6 @@ import com.liruiming.example.factory.Milk;
 public class MengniuFactory implements Factory{
     @Override
     public Milk getMilk() {
-        return new Mengniu();
+        return new MengniuMilk();
     }
 }

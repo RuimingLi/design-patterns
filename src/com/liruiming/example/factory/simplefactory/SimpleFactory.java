@@ -1,9 +1,9 @@
 package com.liruiming.example.factory.simplefactory;
 
-import com.liruiming.example.factory.Guangming;
-import com.liruiming.example.factory.Mengniu;
+import com.liruiming.example.factory.GuangmingMilk;
+import com.liruiming.example.factory.MengniuMilk;
 import com.liruiming.example.factory.Milk;
-import com.liruiming.example.factory.Yili;
+import com.liruiming.example.factory.YiliMilk;
 
 /**
  * Description: SimpleFactory 简单工厂模式
@@ -22,13 +22,13 @@ public class SimpleFactory {
      */
     public static Milk getMilk(String name){
         if("蒙牛".equals(name)){
-            return new Mengniu();
+            return new MengniuMilk();
         }
         if("伊利".equals(name)){
-            return new Yili();
+            return new YiliMilk();
         }
         if("光明".equals(name)){
-            return new Guangming();
+            return new GuangmingMilk();
         }
         throw  new RuntimeException("没有你所需要的产品: "+ name);
     }

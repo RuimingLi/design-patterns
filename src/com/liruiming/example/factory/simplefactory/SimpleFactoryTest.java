@@ -1,5 +1,6 @@
 package com.liruiming.example.factory.simplefactory;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -12,8 +13,8 @@ public class SimpleFactoryTest {
 
     @Test
     public void test(){
-        System.out.println(SimpleFactory.getMilk("蒙牛").getName());
-        System.out.println(SimpleFactory.getMilk("伊利").getName());
-        System.out.println(SimpleFactory.getMilk("光明").getName());
+        Assert.assertEquals("蒙牛纯牛奶",SimpleFactory.getMilk("蒙牛").getName());
+        Assert.assertEquals("伊利纯牛奶",SimpleFactory.getMilk("伊利").getName());
+        Assert.assertEquals("光明纯牛奶",SimpleFactory.getMilk("光明").getName());
     }
 }

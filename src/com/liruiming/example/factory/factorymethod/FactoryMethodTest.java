@@ -1,5 +1,6 @@
 package com.liruiming.example.factory.factorymethod;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -12,11 +13,13 @@ public class FactoryMethodTest {
 
     @Test
     public void test(){
-        Factory factory1 = new MengniuFactory();
-        System.out.println(factory1.getMilk().getName());
-        Factory factory2 = new YiliFactory();
-        System.out.println(factory2.getMilk().getName());
-        Factory factory3 = new GuangmingFactory();
-        System.out.println(factory3.getMilk().getName());
+        Factory mengniuFactory = new MengniuFactory();
+        Assert.assertEquals("蒙牛纯牛奶", mengniuFactory.getMilk().getName());
+
+        Factory yiliFactory = new YiliFactory();
+        Assert.assertEquals("伊利纯牛奶",yiliFactory.getMilk().getName());
+
+        Factory guangmingFactory = new GuangmingFactory();
+        Assert.assertEquals("光明纯牛奶",guangmingFactory.getMilk().getName());
     }
 }

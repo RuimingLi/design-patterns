@@ -1,14 +1,14 @@
 package com.liruiming.example.factory;
 
 /**
- * Description: Guangming
+ * Description: ChunzhenYogurt 蒙牛纯甄酸奶
  *
  * @author LiRuiMing
  * @date 2018/5/12
  */
-public class Guangming implements Milk {
+public class ChunzhenYogurt implements Yogurt {
     @Override
     public String getName() {
-        return "光明纯牛奶";
+        return "蒙牛纯甄酸奶";
     }
 }
